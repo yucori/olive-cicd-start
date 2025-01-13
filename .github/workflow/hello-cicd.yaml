@@ -1,8 +1,8 @@
 name: first-workflow
 on: [push]
 
-job:
-  sell-cmd-jobs:
+jobs:
+  sell-cmd-job:
     runs-on: ubuntu-latest
     steps:
       - name: echo Hello
