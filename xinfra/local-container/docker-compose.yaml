@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    container_name: database
+    networks:
+      - kind_network
+    environment:
+      MYSQL_ROOT_PASSWORD: admin123
+      MYSQL_DATABASE: istory
+      MYSQL_USER: dangtong
+      MYSQL_PASSWORD: admin123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+networks:
+  kind_network:
+    name: kind
+    external: true
